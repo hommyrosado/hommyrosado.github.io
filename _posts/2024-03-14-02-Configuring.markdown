@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Configuring!"
+title: "Jekyll Web Dev Notes 2024"
 date: 2024-03-14 19:530:00-0400
 categories: Jekyll Notes
 ---
