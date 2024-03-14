@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Configuring!"
-date: 2024-03-14 12:55:00 -0400
-categories: Configuration update
+date: 2024-03-14 19:530:00-0400
+categories: Jekyll Notes
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
