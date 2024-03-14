@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jekyll Web Dev Notes 2024"
-date: 2024-03-14 19:53:00-0400
+date: 2024-03-14 19:53:00 -0400
 categories: Jekyll Notes
 ---
 
