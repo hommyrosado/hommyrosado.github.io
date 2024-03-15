@@ -1,0 +1,50 @@
+['com.msn.data.events.browser', 'com.ttecfed.fr011.eex-gateway', 'com.btloader.api', 'io.mitel.webchat', 'com.htvapps.kubrick', 'com.digicert.crl3', 'com.firefox.detectportal', 'com.medallia.digital-cloud-west.resources', 'com.clicktripz.www', 'com.google.dl', 'com.menlosecurity.us-east-1-029060369-view', 'com.mlbtraderumors.www', 'com.google.mtalk', 'com.yahoo.news', 'net.adnxs.shftr', 'com.symantec.ws.ts-ocsp', 'com.intel.gameplayapi', 'com.tasteofhome.www', 'com.sportsnewsman.www', 'com.identrust.ocsp.commercial', 'com.dirtondirt.www', 'net.fbcdn.xx.scontent-iad3-2', 'net.fbcdn', 'com.globalsign.ocsp2', 'MIL.ARMY.ACTD.MEADK6N000SSDR1', 'com.googlecommerce.www', 'com.kampyle.udc-neb', 'com.google.clients6.signaler-pa', 'io.mitel.api.us.gcp-gateway', 'com.windowsupdate.ctldl', 'com.quovadisglobal.crl', 'net.fbcdn.xx.static', 'com.judici.www', 'net.akamaized.prod-streaming-video-msn-com', 'com.linkedin.ads.px', 'mil.army.ds.nanw.rockw6snaaa0006', 'com.prodigyems.frontend', 'com.coinmarketcap', 'com.bradfordexchange.www', 'com.emltrk.l4i57czf', 'com.amazontrust.rootca1.ocsp', 'com.amazon.www', 'MIL.ARMY.ACTD.REDSK6N000SSDR1', 'com.menlosecurity.us-west-1-029060369-view', 'com.adnxs.nym1-ib', 'com.mozilla.services.shavar', 'com.menlosecurity.xhr-us-east-1-029060369-view', '98.1.17.158', 'com.instagram.www', 'com.microsoft.edge-http', 'com.google.id', 'sbs.donday131', 'com.quovadisglobal.ocsp', 'com.addtoany.static', 'com.microsoft.oneocsp', 'com.cdninstagram.scontent', 'sbs.dddec121', 'com.mozilla.services.settings.firefox', 'com.cdn-apple.appleid', 'net.fbcdn.xx.video-iad3-2', 'net.a-mo.sync', 'com.farmandfleet.www', 'com.google.ogs', 'com.microsoft.mp.delivery.dl.tlu.b.msedge', 'com.digicert.cacerts', 'com.adnxs.dcdn', 'com.bazaarvoice.network', 'com.bazaarvoice.api', 'com.ymaws.cdn', 'com.menlosecurity.proxy3-a3522994bfe1e7a821e4dd90ccebd5ce', 'com.medallia.digital-cloud-gov.resources', 'com.alicetraining.portal', 'net.akamaized.prod-video-cms-amp-microsoft-com', 'com.convertexperiments.cdn-4', 'com.google.www', 'MIL.ARMY.ACTD.ROCKK6N000SSDR1', 'com.youtube', 'com.menlosecurity.us-west-1-02900067-view', 'mil.army.ds.nasw.samhw054aab7pu2', 'com.sectigo.crl', 'com.ticketsales.www', 'MIL.ARMY.ACTD.LETTK6N000SSDR1', 'com.msn.data.events-sandbox', 'com.mozilla.services.classify-client', 'com.comodoca.crl', 'com.menlosecurity.xhr-us-east-1-02900067-view', 'mil.army.ds.nanw.rockw6snaaa0016', 'com.bootstrapcdn.maxcdn', 'mil.disa.crl', 'com.google.play', 'net.nelreports.aefd', 'com.google.clients2', 'ms.clarity.c', 'com.paypalobjects.www', 'com.cdn-redfin.ssl', 'com.msftconnecttest.www', 'net.fbcdn.xx.video', 'net.4m.www', 'com.msn.confiant', 'com.grainger.www', 'com.sallysbakingaddiction', 'goog.pki.ocsp', 'com.google.clients6.scone-pa', 'com.google.mail-ads', 'com.google.adservice', 'com.menlosecurity.us-east-1-02900067-view', 'com.launchdarkly.app', 'com.nytimes.www', 'com.msn.c', 'com.microsoft.officecdn', 'net.a-mo.prebid', 'uk.co.dailymail.www', 'com.cnn.money', 'com.schooners.www', 'com.youtube.www', 'net.nelreports.deff', 'MIL.ARMY.ACTD.APGRK6N000SSDR2', 'citrix.workspace', 'com.msn.srtb', 'com.qbk1.c2', 'mil.army.ds.nasw.huacw248aac9n01', 'com.twitter.platform', 'com.genesishealth.www', 'com.riskified.beacon', 'com.menlosecurity.pac.global', 'com.cvent.www', 'com.msn.ntp', 'com.riskified.c', 'com.googleapis.update', 'net.mozilla.cdn.normandy', 'mil.army.ds.nasw.samhw054aab7pf1', 'com.adnxs.lax1-ib', 'com.googleusercontent.clients2', 'net.optimove.sdk', 'net.fbcdn.xx.external-iad3-2', 'com.ups.www', 'com.googleusercontent.lh3', 'com.symcd.s', 'com.criteo.measurement-api', 'co.nfltraderumors', 'ms.clarity.o', 'net.elliottwavetrader.www', 'MIL.ARMY.ACTD.ANADK6N000SSDR1', 'com.microsoft.go', 'com.iesnare.mpsnare', 'net.optimove.realtime-1192', 'com.funjet.res', 'com.bazaarvoice.apps', 'com.cvent.app', 'com.usertrust.crl', 'com.google.clients6.blobcomments-pa', 'io.mediago.images', 'com.cnn.www', 'ms.clarity.q', 'com.msn.www', 'com.menlosecurity.safe', 'com.menlosecurity.xhr-us-west-1-02900067-view', 'com.bingapis.services', 'com.intel.gameplay', 'net.akamaized.img-prod-cms-rt-microsoft-com', 'net.office.cdn.ts.c2r.b', 'com.braintreegateway.client-analytics', 'com.espn.www', 'net.office.cdn.ts.c2r.f', 'MIL.ARMY.ACTD.TOBYK6N000SSDR1', 'com.google.accounts', 'com.ytimg.i', 'net.facebook.connect', 'com.msn.assets', 'com.braintreegateway.api', 'com.bingapis.www', 'net.entrust.ocsp', 'us.scottcountyiowa.www', 'io.curator.api', 'com.globalsign.ocsp', 'com.experientevent.registration', 'MIL.ARMY.ACTD.BELVK6N000SSDR2', 'com.blains.assets', 'com.bleachernation.www', 'com.bugsnag.sessions', 'com.cloudflareinsights', 'MIL.ARMY.ACTD.DAMIK6N000SSDR1', 'com.bazaarvoice.network-a', '142.101.112.156', 'com.yelp.www', 'com.google.sb-ssl', 'org.e-bodies.forum', 'ms.clarity.y', 'net.optimove.stream-1192', 'com.healtheintent.us-1.patientportal.genesishealth', 'com.google.aa', 'com.paypal.checkout', 'cc.popin.trace', 'net.ad-delivery', 'com.sandpiperbeacon.www', 'com.riskified.img', 'ms.clarity.www', 'net.mozilla.cdn.content-signature-2', 'com.jonviral', 'com.therave.www', 'ms.clarity.x', 'com.ups.wwwapps', 'MIL.ARMY.ACTD.REDSK6N000SSDR2', 'com.menlosecurity.proxy2-a3522994bfe1e7a821e4dd90ccebd5ce', 'com.archive-digger.images', 'MIL.ARMY.ACTD.APGRK6N000SSDR1', 'com.msn.windows', 'com.youtube.music', 'com.calypsowebcam.www', 'com.mcafee.sadownload', 'com.sandpiperbeacon', 'net.optimove.sdkuaservice', 'me.awstrack.us-east-1.r.458rl1jp', 'com.foxnews.www', 'org.lencr.o.r3', 'com.icgabes.www', 'com.menlosecurity.xhr-us-west-1-029060369-view', 'net.akamaized.img-s-msn-com', 'com.yahoo.mail', 'com.symcd.rb', 'com.thawte.ocsp', 'org.lencr.c.x1', 'com.launchdarkly.mobile', 'com.msn.api', '142.111.112.156', 'com.zillowstatic.photos', 'com.googleusercontent.doc-0g-3s-prod-02-apps-viewer', 'com.sectigo.ocsp', 'org.nfpa.content', 'net.fbcdn.xx.scontent', 'com.btloader', 'com.google.mail', 'io.mediago.trace', 'com.cdninstagram.scontent-iad3-2', 'com.fbsbx', 'com.google.history', 'com.hawksearch.tracking-na', 'com.paypal.t', 'com.hotmail.www', 'com.googleusercontent.doc-0c-3s-prod-02-apps-viewer', 'com.google.clients6.peoplestackwebexperiments-pa', 'com.pinterest.ct', 'com.googleusercontent.lh5', 'com.tastesbetterfromscratch', 'com.braintree-api.payments', 'com.backtomysouthernroots.www', 'com.blains.products', 'com.googlesyndication.tpc', 'com.cnbc.www', 'mil.disa.ocsp', 'com.amazontrust.r2m02.ocsp', 'com.google.drive', 'com.google.clients6.addons-pa', 'com.bazaarvoice.ugc.display', 'com.yahoo.www', 'com.googleapis.clientservices', 'com.microsoft365.checkout', 'io.mitel.api.director', 'com.digicert.ocsp', 'MIL.ARMY.ACTD.BRAGK6N93DSDR01', 'com.cvent.custom', 'com.google.analytics', 'io.mediago.api', 'net.nelreports.bzib', 'com.s-msn.img', 'com.pinimg.s', 'com.fbsbx.www', 'com.paypal.www', 'com.microsoft.metaservices.dmd', 'li.href', 'com.totaladblock.www']
+
+Example script to generate barcharts:
+import pandas as pd
+import json
+import matplotlib.pyplot as plt 
+
+# Use pandas to read in the csv file.  It uses relative the
+# relative path
+df = pd.read_csv('cpb_zeek_http_mission_ocx.csv')
+# Print the first 5 entries of the data set
+df.head()
+# We are interested in 2 pieces of information at first: url and source ip
+url_domain_reverse_list = []
+url_original_list = []
+url_domain_list = []
+for i, j in df.iterrows():
+    tmp = j['url']
+    if isinstance(tmp, str):
+        tmp_json = json.loads(tmp)
+        url_domain_reverse_list.append(tmp_json['domain_reverse'])
+        url_original_list.append(tmp_json['original'])
+        url_domain_list.append(tmp_json['domain'])
+
+# Get unique list
+unique_url_domain_reverse_list = list(set(url_domain_reverse_list))
+url_domain_reverse_count = []
+unique_url_original_list = list(set(url_original_list))
+url_original_count = []
+unique_url_domain_list = list(set(url_domain_list))
+url_domain_count = []
+# Gather the count of each url from the total data set
+for i in unique_url_domain_reverse_list:
+    tmp_count = url_domain_reverse_list.count(i)
+    url_domain_reverse_count.append(tmp_count)
+
+for i in unique_url_original_list:
+    tmp_count = url_original_list.count(i)
+    url_original_count.append(tmp_count)
+for i in unique_url_domain_list:
+    tmp_count = url_domain_list.count(i)
+    url_domain_count.append(tmp_count)
+# Start plotting bar charts
+fig = plt.figure()
+# creating the bar plot
+plt.barh(unique_url_domain_reverse_list[0:6], url_domain_reverse_count[0:6])
+plt.xlabel("Visits")
+plt.ylabel("Domain Reverse List")
+plt.show()  
+ 
