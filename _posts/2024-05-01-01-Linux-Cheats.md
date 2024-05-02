@@ -5,9 +5,8 @@ date: 2024-05-01 12:01:33 -0400
 categories: LINUX
 ---
 
-RHCSA 8 (EX 200) Certification Exam Paper Solution 2021 | Complete Video | Nehra Classes
+Linux Command Line Cheat Sheet Example
 
-Source: <https://www.youtube.com/watch?v=mkW2UefXEvI&t=648s>
 
 
     awk
