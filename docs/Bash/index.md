@@ -431,8 +431,76 @@ fi
 
 This script helps you proactively manage disk space and prevent issues related to full disks.
 
-## Control Structures
+## Control Structures and Branching
+Control structures comprise Conditional Statements, Loops, and Case Statements (falls under Branching), directing the application to determine how and in what order different parts of the code are executed.
 
+Control structures include:
+
+1. Conditional Statements: These allow the program to make decisions and execute different code based on certain conditions.
+
+Examples: if, else, elif, case
+
+2. Loops: These allow the program to execute a block of code multiple times.
+
+Examples: for, while, until
+
+3. Jump Statements: These control the flow by jumping to another part of the code, skipping or repeating execution.
+
+Examples: break, continue, return, exit
+
+4. Case Statements: The case statement in Bash is used for pattern matching and is an alternative to using multiple if-elif-else statements. It's particularly useful when you have to compare a single variable against multiple values. The case statement simplifies the structure of your script, making it more readable and easier to maintain.
+
+Note: 
+In Bash, esac is used to signify the end of a case statement. It's essentially case spelled backward, which is a common convention in many programming languages to mark the end of a block of code that was opened with a particular keyword.
+
+```bash
+#!/bin/bash
+# Example of Bash Case Statement
+
+echo "Enter a number between 1 and 3:"
+read number
+
+case $number in
+    1)
+        echo "You entered one."
+        ;;
+    2)
+        echo "You entered two."
+        ;;
+    3)
+        echo "You entered three."
+        ;;
+    *)
+        echo "You did not enter a number between 1 and 3."
+        ;;
+esac
+
+```
+
+Example of a more advanced Case Statement using multiple patterns:
+```bash
+#!/bin/bash
+
+echo "What is your favorite color?"
+read color
+
+case $color in
+    red|Red)
+        echo "Roses are red!"
+        ;;
+    blue|Blue)
+        echo "The sky is blue!"
+        ;;
+    green|Green)
+        echo "Grass is green!"
+        ;;
+    *)
+        echo "I don't know that color."
+        ;;
+esac
+
+
+```
 
 ## Functions
 
