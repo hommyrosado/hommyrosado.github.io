@@ -300,24 +300,15 @@ This script helps you proactively manage disk space and prevent issues related t
 
 
 ## Control Structures
-{: .d-inline-block }
 
-New (v0.4.0)
-{: .label .label-green }
-
+---
+---
 
 
 ## Functions
 
-```yaml
-# Aux links for the upper right navigation
-aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/just-the-docs/just-the-docs"
-
-# Makes Aux links open in a new tab. Default is false
-aux_links_new_tab: false
-```
+---
+---
 
 ## Input/Output and Redirection
 
