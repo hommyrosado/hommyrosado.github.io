@@ -21,15 +21,14 @@ Just the Docs has some specific configuration parameters that can be defined in 
 
 
 
-## Site logo
+## Introduction to Bash
 
 ```yaml
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "/assets/images/just-the-docs.png"
 ```
 
-## Site favicon
-
+## Basic Commands and Utilities
 ```yaml
 # Set a path/url to a favicon that will be displayed by the browser
 favicon_ico: "/assets/images/favicon.ico"
@@ -37,7 +36,7 @@ favicon_ico: "/assets/images/favicon.ico"
 
 If the path to your favicon is `/favicon.ico`, you can leave `favicon_ico` unset.
 
-## Search
+## Shell Scripting Basics
 
 ```yaml
 # Enable or disable the site search
@@ -71,7 +70,7 @@ search:
   focus_shortcut_key: 'k'
 ```
 
-## Mermaid Diagrams
+## Control Structures
 {: .d-inline-block }
 
 New (v0.4.0)
@@ -90,7 +89,7 @@ Provide a `path` instead of a `version` key to load the mermaid library from a l
 
 
 
-## Aux links
+## Functions
 
 ```yaml
 # Aux links for the upper right navigation
@@ -102,7 +101,7 @@ aux_links:
 aux_links_new_tab: false
 ```
 
-## Navigation sidebar
+## Input/Output and Redirection
 
 ```yaml
 # Enable or disable the side/mobile menu globally
@@ -110,7 +109,7 @@ aux_links_new_tab: false
 nav_enabled: true
 ```
 
-## Heading anchor links
+## Advanced Scripting Techniques
 
 ```yaml
 # Heading anchor links appear on hover over h1-h6 tags in page content
@@ -120,7 +119,7 @@ nav_enabled: true
 heading_anchors: true
 ```
 
-## External navigation links
+## Process Management
 {: .d-inline-block }
 
 New (v0.4.0)
@@ -129,7 +128,7 @@ New (v0.4.0)
 External links can be added to the navigation through the `nav_external_links` option.
 
 
-## Footer content
+## Scripting Best Practices
 
 ```yaml
 # Footer content
@@ -160,7 +159,7 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 - `gh_edit_source` is the source directory that your project files are stored in (should be the same as [site.source](https://jekyllrb.com/docs/configuration/options/))
 - `gh_edit_view_mode` is `"tree"` by default, which brings the user to the github page; switch to `"edit"` to bring the user directly into editing mode
 
-## Color scheme
+## Practical Projects
 
 ```yaml
 # Color scheme supports "light" (default) and "dark"
@@ -239,7 +238,6 @@ The value of `callouts_level` is either `quiet` or `loud`;
 `loud` increases the saturation and lightness of the backgrounds.
 The default level is `quiet` when using the `light` or custom color schemes,
 and `loud` when using the `dark color scheme.`
-
 
 
 ## Google Analytics
