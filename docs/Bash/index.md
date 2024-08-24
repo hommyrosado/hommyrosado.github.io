@@ -659,8 +659,104 @@ case $color in
         ;;
 esac
 
-
 ```
+
+**Understanding Exit Status**
+In Bash, the **exit status** (also known as the **exit code** or **return code**) is a numeric value returned by a command or script to indicate its success or failure. This value is used by the operating system or other programs to determine if a command or script executed successfully or if an error occurred.
+
+### **Understanding Exit Status:**
+
+1. **Success (Exit Status 0):**
+   - By convention, a command or script that executes successfully returns an exit status of `0`. This indicates that the command completed without errors.
+   - Example:
+     ```bash
+     echo "Hello, World!"
+     echo $?  # Output: 0
+     ```
+   - In the example above, `echo $?` returns `0`, indicating the `echo` command executed successfully.
+
+2. **Failure (Non-Zero Exit Status):**
+   - If a command or script fails for any reason, it returns a non-zero exit status. The specific non-zero value can provide more information about the type of error that occurred, but generally, any non-zero value indicates an error.
+   - Example:
+     ```bash
+     ls /nonexistent_directory
+     echo $?  # Output: 2
+     ```
+   - In this case, `ls` attempts to list a directory that doesn’t exist, so it fails and returns an exit status of `2`. The value `2` is specific to the type of error (in this case, "No such file or directory").
+
+3. **Checking the Exit Status:**
+   - The special variable `$?` holds the exit status of the last command executed. You can check this variable immediately after running a command to see if it succeeded or failed.
+   - Example:
+     ```bash
+     command
+     if [ $? -eq 0 ]; then
+       echo "Command succeeded"
+     else
+       echo "Command failed"
+     fi
+     ```
+
+4. **Custom Exit Status in Scripts:**
+   - You can set custom exit statuses in your scripts using the `exit` command. This is useful for signaling different types of errors to the calling process.
+   - Example:
+     ```bash
+     #!/bin/bash
+     if [ -z "$1" ]; then
+       echo "No argument provided"
+       exit 1  # Exit with status 1 to indicate an error
+     else
+       echo "Argument provided: $1"
+       exit 0  # Exit with status 0 to indicate success
+     fi
+     ```
+
+5. **Common Exit Status Codes:**
+   - While the specific meaning of non-zero exit codes can vary, some common exit statuses are:
+     - `0`: Success
+     - `1`: General error (often used for a generic error)
+     - `2`: Misuse of shell builtins (e.g., missing keyword or command)
+     - `126`: Command invoked cannot execute
+     - `127`: Command not found
+     - `128`: Invalid argument to `exit`
+     - `130`: Script terminated by Ctrl+C
+     - `255`: Exit status out of range (exit statuses can be between 0-255)
+
+6. **Chaining Commands Based on Exit Status:**
+   - You can chain commands to execute based on the success or failure of previous commands using `&&` and `||`.
+     - `&&`: Executes the next command only if the previous command succeeded (exit status 0).
+     - `||`: Executes the next command only if the previous command failed (non-zero exit status).
+   - Example:
+     ```bash
+     mkdir mydir && cd mydir
+     ```
+
+     This creates a directory named `mydir` and changes into it, but only if `mkdir` succeeded.
+
+### **Practical Example:**
+```bash
+#!/bin/bash
+
+echo "Running a command..."
+some_command
+
+if [ $? -eq 0 ]; then
+    echo "The command ran successfully."
+else
+    echo "The command failed with exit status $?."
+fi
+```
+
+In this script:
+- `some_command` is executed.
+- The exit status of `some_command` is checked using `$?`.
+- Depending on whether the command succeeded or failed, an appropriate message is printed.
+
+### **Summary:**
+- **Exit status** is a key concept in Bash scripting that indicates the success or failure of a command.
+- A successful command returns `0`, while a failure returns a non-zero value.
+- The exit status is stored in the special variable `$?`.
+- Custom exit statuses can be set in scripts using the `exit` command.
+- Understanding and using exit statuses effectively is crucial for error handling and creating robust scripts.
 
 ## Functions
 
