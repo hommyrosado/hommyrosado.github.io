@@ -111,7 +111,7 @@ fi
 Means by which to execute your .sh files: To run a `.sh` (shell script)
 file, you can follow these steps:
 
-1. **Make the Script Executable (if it's not already)** {#1-make-the-script-executable-if-its-not-already}
+   1. **Make the Script Executable (if it's not already)** {#1-make-the-script-executable-if-its-not-already}
 
 Before running a shell script, ensure it has execute permissions. You
 can do this using the `chmod` command:
@@ -122,11 +122,11 @@ chmod +x script_name.sh
 
 This command makes the script executable.
 
-2. **Execute the Script** {#2-execute-the-script}
+   2. **Execute the Script** {#2-execute-the-script}
 
 There are a few different ways to run the script:
 
-a) **Run the Script with `./`** {#a-run-the-script-with-}
+    a) **Run the Script with `./`** {#a-run-the-script-with-}
 
 This is the most common method. Navigate to the directory where the
 script is located and run it using `./`:
@@ -135,7 +135,7 @@ script is located and run it using `./`:
 ./script_name.sh
 ```
 
-b) **Run the Script with `bash` or `sh`**
+    b) **Run the Script with `bash` or `sh`**
 
 If you don't want to change permissions, you can explicitly run the
 script using `bash` or `sh`:
@@ -159,13 +159,13 @@ Let's say you have a script called `hello_world.sh`:
 echo "Hello, World!"
 ```
 
-1.  **Make it executable**:
+   1. **Make it executable**:
 
     ``` bash
     chmod +x hello_world.sh
     ```
 
-2.  **Run the script**:
+   2. **Run the script**:
 
     ``` bash
     ./hello_world.sh
@@ -189,7 +189,7 @@ Note:
 -   Always ensure the first line of your script (`#!/bin/bash`)
     correctly points to the interpreter you want to use (in this case,
     Bash).
-:::
+
 
 ## Basic Commands and Utilities
 Here’s a breakdown of some of the most essential basic commands and utilities you’ll use when working with Bash. These commands are foundational for  navigating the file system, manipulating files, and interacting with the system.
