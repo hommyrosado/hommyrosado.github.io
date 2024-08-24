@@ -103,13 +103,14 @@ Here\'s a breakdown of each:
     Typical Setup: On many systems, .bash_profile is configured to
     source (include) .bashrc to ensure that the settings in .bashrc are
     applied even during login sessions:
---- bash
+
+```bash
 # Example code:
 
 if \[ -f \~/.bashrc \]; then
 . \~/.bashrc
 fi
----
+```
 
 
 
