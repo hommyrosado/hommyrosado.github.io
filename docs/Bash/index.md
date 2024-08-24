@@ -305,17 +305,6 @@ This script helps you proactively manage disk space and prevent issues related t
 New (v0.4.0)
 {: .label .label-green }
 
-The minimum configuration requires the key for `version` ([from jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)) in `_config.yml`:
-
-```yaml
-mermaid:
-  # Version of mermaid library
-  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
-  version: "9.1.3"
-```
-
-Provide a `path` instead of a `version` key to load the mermaid library from a local file.
-
 
 
 ## Functions
