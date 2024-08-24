@@ -195,8 +195,168 @@ Note:
 Here’s a breakdown of some of the most essential basic commands and utilities you’ll use when working with Bash. These commands are foundational for  navigating the file system, manipulating files, and interacting with the system.
 
 Some Bash fundamentals:
+The type \[type COMMAND\] built-in shell command in Bash is used to
+display information about a command\'s type. It tells you how the shell
+interprets a command, whether it is a built-in command, an alias, a
+function, or an external command (an executable file).
+Example: type \[options\] name
+Common Options
 
+-   -t: Print a single word which is one of \"alias\", \"keyword\",
+    \"function\", \"builtin\", \"file\", or \"name\" if name is not
+    found.
+-   -a: Display all of the places that contain an executable named name.
+    This includes aliases, built-ins, and functions, as well as files in
+    the \$PATH.
+-   -p: Displays the path to the executable that would have been
+    executed, if name is an external command.
 
+\$ type -a test test is a shell builtin test is /usr/bin/test test is
+/bin/test test is /usr/bin/test
+
+Example to find all locations of a command: `<br>`{=html} type -a echo
+echo is a shell builtin
+echo is /usr/bin/echo
+echo is /bin/echo
+echo is /usr/bin/echo
+
+`<br>`{=html}type \--help type: type \[-afptP\] name \[name \...\]
+`<br>`{=html}Display information about command type.
+
+    For each NAME, indicate how it would be interpreted if used as a
+    command name.
+
+    Options:
+      -a        display all locations containing an executable named NAME;
+                includes aliases, builtins, and functions, if and only if
+                the `-p' option is not also used
+      -f        suppress shell function lookup
+      -P        force a PATH search for each NAME, even if it is an alias,
+                builtin, or function, and returns the name of the disk file
+                that would be executed
+      -p        returns either the name of the disk file that would be executed,
+                or nothing if `type -t NAME' would not return `file'
+      -t        output a single word which is one of `alias', `keyword',
+                `function', `builtin', `file' or `', if NAME is an alias,
+                shell reserved word, shell function, shell builtin, disk file,
+                or not found, respectively
+
+    Arguments:
+      NAME      Command name to be interpreted.
+
+    Exit Status:
+    Returns success if all of the NAMEs are found; fails if any are not found.
+
+In Bash, both `echo` and `printf` are used to display text or output
+data to the terminal. However, they have some key differences in
+functionality, behavior, and usage. Here's a comparison:
+
+### 1. **Basic Syntax** {#1-basic-syntax}
+
+-   **`echo`**:
+
+    ``` bash
+    echo "Hello, World!"
+    ```
+
+-   **`printf`**:
+
+    ``` bash
+    printf "%s\n" "Hello, World!"
+    ```
+
+### 2. **Usage** {#2-usage}
+
+-   **`echo`**:
+    -   `echo` is simpler and easier to use for basic output.
+
+    -   It automatically adds a newline character at the end of the
+        output unless suppressed with the `-n` option.
+
+    -   It has less formatting control compared to `printf`.
+
+    -   Example:
+
+        ``` bash
+        echo "Hello, World!"
+        ```
+-   **`printf`**:
+    -   `printf` is more powerful and flexible, similar to the C
+        language's `printf` function.
+
+    -   It does not add a newline character automatically; you need to
+        include it explicitly using `\n`.
+
+    -   It provides more control over formatting, making it suitable for
+        more complex output needs, such as formatting numbers, aligning
+        text, etc.
+
+    -   Example:
+
+        ``` bash
+        printf "%s\n" "Hello, World!"
+        ```
+
+### 3. **Portability** {#3-portability}
+
+-   **`echo`**:
+    -   `echo` may behave differently across different systems or shells
+        (e.g., with how it handles special characters like `-e` or
+        backslashes).
+    -   Some implementations of `echo` treat options like `-e` (to
+        enable interpretation of backslash escapes) and `-n` (to
+        suppress newline) differently.
+-   **`printf`**:
+    -   `printf` is more consistent across different environments
+        because it adheres more closely to POSIX standards.
+    -   It\'s more reliable for scripts that need to be portable across
+        different Unix-like systems.
+
+### 4. **Special Characters and Escape Sequences** {#4-special-characters-and-escape-sequences}
+
+-   **`echo`**:
+    -   Handles escape sequences depending on the options used (e.g.,
+        `-e` for enabling backslash escapes).
+
+    -   Example with escape sequence:
+
+        ``` bash
+        echo -e "Line1\nLine2"
+        ```
+-   **`printf`**:
+    -   Provides precise control over escape sequences and formatting.
+
+    -   Example with escape sequence:
+
+        ``` bash
+        printf "Line1\nLine2\n"
+        ```
+
+### 5. **Formatting Capabilities** {#5-formatting-capabilities}
+
+-   **`echo`**:
+    -   Limited formatting capabilities. Mostly used for simple text
+        output.
+-   **`printf`**:
+    -   Offers advanced formatting, similar to C\'s `printf`. You can
+        format strings, numbers, align text, and more.
+
+    -   Example of formatting a number:
+
+        ``` bash
+        printf "Number: %04d\n" 5
+        ```
+
+        Output: `Number: 0005`
+
+-   **Use `echo`**: When you need simple, quick text output with minimal
+    formatting needs.
+-   **Use `printf`**: When you need precise control over formatting,
+    need to print data without an automatic newline, or require more
+    advanced output formatting.
+
+In scripts, it\'s generally a good idea to use `printf` for consistency
+and portability, especially when complex formatting is involved.
 
 
 **File and Directory Navigation**
@@ -523,179 +683,8 @@ esac
 
 
 
-The type \[type COMMAND\] built-in shell command in Bash is used to
-display information about a command\'s type. It tells you how the shell
-interprets a command, whether it is a built-in command, an alias, a
-function, or an external command (an executable file).
-Example: type \[options\] name
-Common Options
-
--   -t: Print a single word which is one of \"alias\", \"keyword\",
-    \"function\", \"builtin\", \"file\", or \"name\" if name is not
-    found.
--   -a: Display all of the places that contain an executable named name.
-    This includes aliases, built-ins, and functions, as well as files in
-    the \$PATH.
--   -p: Displays the path to the executable that would have been
-    executed, if name is an external command.
-:::
-
-::: {.cell .markdown}
-\$ type -a test test is a shell builtin test is /usr/bin/test test is
-/bin/test test is /usr/bin/test
-
-Example to find all locations of a command: `<br>`{=html} type -a echo
-echo is a shell builtin
-echo is /usr/bin/echo
-echo is /bin/echo
-echo is /usr/bin/echo
-
-`<br>`{=html}type \--help type: type \[-afptP\] name \[name \...\]
-`<br>`{=html}Display information about command type.
-
-    For each NAME, indicate how it would be interpreted if used as a
-    command name.
-
-    Options:
-      -a        display all locations containing an executable named NAME;
-                includes aliases, builtins, and functions, if and only if
-                the `-p' option is not also used
-      -f        suppress shell function lookup
-      -P        force a PATH search for each NAME, even if it is an alias,
-                builtin, or function, and returns the name of the disk file
-                that would be executed
-      -p        returns either the name of the disk file that would be executed,
-                or nothing if `type -t NAME' would not return `file'
-      -t        output a single word which is one of `alias', `keyword',
-                `function', `builtin', `file' or `', if NAME is an alias,
-                shell reserved word, shell function, shell builtin, disk file,
-                or not found, respectively
-
-    Arguments:
-      NAME      Command name to be interpreted.
-
-    Exit Status:
-    Returns success if all of the NAMEs are found; fails if any are not found.
-:::
 
 
-
-::: {.cell .markdown}
-In Bash, both `echo` and `printf` are used to display text or output
-data to the terminal. However, they have some key differences in
-functionality, behavior, and usage. Here's a comparison:
-
-### 1. **Basic Syntax** {#1-basic-syntax}
-
--   **`echo`**:
-
-    ``` bash
-    echo "Hello, World!"
-    ```
-
--   **`printf`**:
-
-    ``` bash
-    printf "%s\n" "Hello, World!"
-    ```
-
-### 2. **Usage** {#2-usage}
-
--   **`echo`**:
-    -   `echo` is simpler and easier to use for basic output.
-
-    -   It automatically adds a newline character at the end of the
-        output unless suppressed with the `-n` option.
-
-    -   It has less formatting control compared to `printf`.
-
-    -   Example:
-
-        ``` bash
-        echo "Hello, World!"
-        ```
--   **`printf`**:
-    -   `printf` is more powerful and flexible, similar to the C
-        language's `printf` function.
-
-    -   It does not add a newline character automatically; you need to
-        include it explicitly using `\n`.
-
-    -   It provides more control over formatting, making it suitable for
-        more complex output needs, such as formatting numbers, aligning
-        text, etc.
-
-    -   Example:
-
-        ``` bash
-        printf "%s\n" "Hello, World!"
-        ```
-
-### 3. **Portability** {#3-portability}
-
--   **`echo`**:
-    -   `echo` may behave differently across different systems or shells
-        (e.g., with how it handles special characters like `-e` or
-        backslashes).
-    -   Some implementations of `echo` treat options like `-e` (to
-        enable interpretation of backslash escapes) and `-n` (to
-        suppress newline) differently.
--   **`printf`**:
-    -   `printf` is more consistent across different environments
-        because it adheres more closely to POSIX standards.
-    -   It\'s more reliable for scripts that need to be portable across
-        different Unix-like systems.
-
-### 4. **Special Characters and Escape Sequences** {#4-special-characters-and-escape-sequences}
-
--   **`echo`**:
-    -   Handles escape sequences depending on the options used (e.g.,
-        `-e` for enabling backslash escapes).
-
-    -   Example with escape sequence:
-
-        ``` bash
-        echo -e "Line1\nLine2"
-        ```
--   **`printf`**:
-    -   Provides precise control over escape sequences and formatting.
-
-    -   Example with escape sequence:
-
-        ``` bash
-        printf "Line1\nLine2\n"
-        ```
-
-### 5. **Formatting Capabilities** {#5-formatting-capabilities}
-
--   **`echo`**:
-    -   Limited formatting capabilities. Mostly used for simple text
-        output.
--   **`printf`**:
-    -   Offers advanced formatting, similar to C\'s `printf`. You can
-        format strings, numbers, align text, and more.
-
-    -   Example of formatting a number:
-
-        ``` bash
-        printf "Number: %04d\n" 5
-        ```
-
-        Output: `Number: 0005`
-
-### Summary:
-
--   **Use `echo`**: When you need simple, quick text output with minimal
-    formatting needs.
--   **Use `printf`**: When you need precise control over formatting,
-    need to print data without an automatic newline, or require more
-    advanced output formatting.
-
-In scripts, it\'s generally a good idea to use `printf` for consistency
-and portability, especially when complex formatting is involved.
-:::
-
-::: {.cell .markdown}
 In Bash scripting, positional parameters, special parameters, and
 variables play a crucial role in controlling the behavior of scripts and
 passing data. Here's an overview of each:
