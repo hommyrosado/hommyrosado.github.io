@@ -62,7 +62,7 @@ echo "Backup process completed."
 ```
 
 ## Basic Commands and Utilities
-Here’s a breakdown of some of the most essential basic commands and utilities \ you’ll use when working with Bash. These commands are foundational for \ navigating the file system, manipulating files, and interacting with the \ system.
+Here’s a breakdown of some of the most essential basic commands and utilities you’ll use when working with Bash. These commands are foundational for  navigating the file system, manipulating files, and interacting with the system.
 
 **File and Directory Navigation**
 1. **`pwd` (Print Working Directory)**
@@ -251,7 +251,10 @@ Here’s a breakdown of some of the most essential basic commands and utilities 
 
 ```bash
 
-# Here's a useful Bash script that monitors disk space usage and sends an alert when the disk space usage exceeds a certain threshold. This can be handy for system administrators who want to ensure that their systems don't run out of disk space unexpectedly.
+# Here's a useful Bash script that monitors disk space usage and sends an 
+# alert when the disk space usage exceeds a certain threshold. This can be
+# handy for system administrators who want to ensure that their systems don't
+# run out of disk space unexpectedly.
 
 ### **Disk Space Monitoring Script**
 
@@ -271,7 +274,7 @@ if [ "$USAGE" -gt "$THRESHOLD" ]; then
 fi
 ```
 
-### **How the Script Works:**
+**How the Script Works:**
 1. **`THRESHOLD=80`**: This sets the threshold for disk usage at 80%. You can adjust this value to suit your needs.
    
 2. **`df / | grep / | awk '{ print $5 }' | sed 's/%//g'`**: This command checks the disk usage of the root filesystem (`/`). It extracts the usage percentage and removes the `%` sign.
@@ -280,7 +283,7 @@ fi
 
 4. **`echo "Warning: Disk space usage ... | mail -s "Disk Space Alert" you@example.com`**: If the usage exceeds the threshold, an email is sent to notify the administrator. You can replace the `mail` command with another notification method if needed.
 
-### **Running the Script**
+**Running the Script**
 - Save the script to a file, for example, `disk_monitor.sh`.
 - Make it executable with the command: `chmod +x disk_monitor.sh`.
 - Schedule it to run periodically using cron (e.g., every hour) by adding an entry to your crontab:
@@ -292,7 +295,6 @@ fi
 This script helps you proactively manage disk space and prevent issues related to full disks.
 ```
 
-If the path to your favicon is `/favicon.ico`, you can leave `favicon_ico` unset.
 
 ## Shell Scripting Basics
 
