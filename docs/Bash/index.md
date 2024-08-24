@@ -296,11 +296,6 @@ fi
   ```
 
 This script helps you proactively manage disk space and prevent issues related to full disks.
-```
-```yaml
-
-
-```
 
 ## Control Structures
 
