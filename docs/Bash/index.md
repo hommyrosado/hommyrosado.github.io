@@ -22,7 +22,7 @@ In efforts to utilize Bash in more complex methods, I've found myself having to 
 
 
 ## Introduction to Bash
-There are several alternatives to Bash. The most notable alternatives are:
+ Several good reasons to become more proficient in Bash are due in part that Bash is so widely available, and compatible on so many systems. Bash has a relatively easy learning curve and most Bash scripts can work on almost all Unix systems (not completely POSIX compliant) and now is cross-platform compliant. conversely, there are several alternatives to Bash. The most notable alternatives are:
 1. Zsh (Z-Shell) - Zshell is a powerful shell alternative and an (improved) version of Bash. Zsh is great for developers. I'll review Zsh more thoroughly following the completion of Bash.
 2. Fish (Friendly Interactive Shell) - Fish is an interactive shell that provides some cool features like Auto-suggetions and syntax highlighting. Fish is ideal for users who require a more modern shell.
 3. Ksh (Korn Shell) - Kshell is an older shell better suited for legacy systems.
@@ -62,10 +62,235 @@ echo "Backup process completed."
 ```
 
 ## Basic Commands and Utilities
+Here’s a breakdown of some of the most essential basic commands and utilities you’ll use when working with Bash. These commands are foundational for navigating the file system, manipulating files, and interacting with the system.
 
-```yaml
-# Set a path/url to a favicon that will be displayed by the browser
-favicon_ico: "/assets/images/favicon.ico"
+### **File and Directory Navigation**
+1. **`pwd` (Print Working Directory)**
+   - Displays the full path of the current directory you are in.
+   - Example: `pwd`
+
+2. **`cd` (Change Directory)**
+   - Changes the current directory to a specified one.
+   - Example: `cd /path/to/directory`
+
+3. **`ls` (List)**
+   - Lists files and directories in the current directory.
+   - Common options:
+     - `ls -l`: Long listing format (shows file permissions, owner, size, etc.)
+     - `ls -a`: Lists all files, including hidden files (those starting with `.`)
+     - `ls -h`: Human-readable sizes (useful with `-l`)
+
+4. **`mkdir` (Make Directory)**
+   - Creates a new directory.
+   - Example: `mkdir new_directory`
+
+5. **`rmdir` (Remove Directory)**
+   - Removes an empty directory.
+   - Example: `rmdir directory_name`
+
+6. **`rm` (Remove)**
+   - Deletes files or directories.
+   - Common options:
+     - `rm file_name`: Deletes a file.
+     - `rm -r directory_name`: Recursively deletes a directory and its contents.
+     - `rm -i`: Asks for confirmation before deleting each file.
+     - `rm -f`: Forces deletion without asking for confirmation.
+
+7. **`cp` (Copy)**
+   - Copies files or directories from one location to another.
+   - Example: `cp source_file destination`
+   - To copy directories, use `cp -r` (recursive).
+
+8. **`mv` (Move)**
+   - Moves or renames files or directories.
+   - Example: `mv old_name new_name`
+   - Example: `mv file_name /new/location/`
+
+### **File Viewing and Manipulation**
+1. **`cat` (Concatenate)**
+   - Displays the contents of a file or concatenates multiple files.
+   - Example: `cat file_name`
+
+2. **`less` / `more`**
+   - `less`: Views the content of a file page by page, allows backward movement.
+   - `more`: Views the content of a file page by page, but only forward movement.
+   - Example: `less file_name`
+
+3. **`head` and `tail`**
+   - `head`: Displays the first few lines of a file.
+   - `tail`: Displays the last few lines of a file.
+   - Example: `head -n 10 file_name` (displays the first 10 lines)
+   - Example: `tail -n 10 file_name` (displays the last 10 lines)
+
+4. **`touch`**
+   - Creates an empty file or updates the timestamp of an existing file.
+   - Example: `touch new_file`
+
+5. **`echo`**
+   - Outputs the given text to the terminal or writes it to a file.
+   - Example: `echo "Hello, World!"`
+   - Example: `echo "Hello, World!" > file_name` (writes to a file)
+
+### **File Permissions and Ownership**
+1. **`chmod` (Change Mode)**
+   - Changes the file or directory permissions.
+   - Example: `chmod 755 file_name` (rwxr-xr-x)
+   - Example: `chmod +x script.sh` (adds execute permission)
+
+2. **`chown` (Change Ownership)**
+   - Changes the owner and group of a file or directory.
+   - Example: `chown user:group file_name`
+   - Example: `sudo chown root:root /some/file`
+
+3. **`chgrp` (Change Group)**
+   - Changes the group ownership of a file or directory.
+   - Example: `chgrp group_name file_name`
+
+### **Text Processing and Search**
+1. **`grep`**
+   - Searches for a pattern in a file or output and prints matching lines.
+   - Example: `grep "search_term" file_name`
+   - Common options:
+     - `grep -i`: Case-insensitive search.
+     - `grep -r`: Recursively search in directories.
+     - `grep -v`: Invert match (shows lines that don’t match).
+
+2. **`sed` (Stream Editor)**
+   - Performs basic text transformations on an input stream (file or input).
+   - Example: `sed 's/old_text/new_text/' file_name` (replaces old_text with new_text)
+
+3. **`awk`**
+   - A powerful text-processing language used for pattern scanning and processing.
+   - Example: `awk '{print $1}' file_name` (prints the first field/column)
+
+4. **`cut`**
+   - Removes sections from each line of files.
+   - Example: `cut -d',' -f1 file_name` (cuts out the first column based on the delimiter `,`)
+
+5. **`sort`**
+   - Sorts lines of text in a file.
+   - Example: `sort file_name`
+   - Example: `sort -r file_name` (sorts in reverse order)
+
+6. **`uniq`**
+   - Reports or filters out repeated lines in a file (used often after `sort`).
+   - Example: `uniq file_name`
+
+### **System Information and Management**
+1. **`ps`**
+   - Displays currently running processes.
+   - Example: `ps aux` (detailed process list)
+
+2. **`top`**
+   - Displays real-time system resource usage, including CPU and memory.
+   - Example: `top`
+
+3. **`kill`**
+   - Terminates a process by its process ID (PID).
+   - Example: `kill PID`
+
+4. **`df` (Disk Free)**
+   - Shows disk space usage of file systems.
+   - Example: `df -h` (human-readable format)
+
+5. **`du` (Disk Usage)**
+   - Shows disk usage of files and directories.
+   - Example: `du -sh directory_name` (summarizes disk usage)
+
+6. **`uptime`**
+   - Displays how long the system has been running.
+   - Example: `uptime`
+
+### **Networking**
+1. **`ping`**
+   - Checks the network connection to a host.
+   - Example: `ping google.com`
+
+2. **`ifconfig` / `ip`**
+   - `ifconfig`: Configures or displays network interface parameters.
+   - `ip`: More modern replacement for `ifconfig`.
+   - Example: `ip addr show`
+
+3. **`wget` / `curl`**
+   - `wget`: Downloads files from the web.
+   - Example: `wget http://example.com/file.zip`
+   - `curl`: Transfers data from or to a server, supporting various protocols.
+   - Example: `curl -O http://example.com/file.zip`
+
+### **Archiving and Compression**
+1. **`tar`**
+   - Archives files into a tarball (with or without compression).
+   - Example: `tar -cvf archive.tar directory/` (create an archive)
+   - Example: `tar -xvf archive.tar` (extract an archive)
+
+2. **`gzip` / `gunzip`**
+   - Compresses files (gzip) or decompresses them (gunzip).
+   - Example: `gzip file_name`
+   - Example: `gunzip file_name.gz`
+
+3. **`zip` / `unzip`**
+   - `zip`: Creates a compressed zip file.
+   - `unzip`: Extracts files from a zip archive.
+   - Example: `zip archive.zip file_name`
+   - Example: `unzip archive.zip`
+
+### **Permissions and Environment**
+1. **`sudo`**
+   - Executes a command with superuser privileges.
+   - Example: `sudo apt-get update`
+
+2. **`export`**
+   - Sets environment variables.
+   - Example: `export PATH=$PATH:/new/path`
+
+3. **`alias`**
+   - Creates shortcuts for commands.
+   - Example: `alias ll='ls -lah'`
+
+### **Conclusion**
+These basic commands and utilities form the core of working with Bash. They allow you to navigate the file system, manipulate files, process text, manage system processes, and handle permissions. Mastering these will give you a strong foundation in Bash scripting and Unix/Linux command-line usage.
+
+```bash
+
+# Here's a useful Bash script that monitors disk space usage and sends an alert when the disk space usage exceeds a certain threshold. This can be handy for system administrators who want to ensure that their systems don't run out of disk space unexpectedly.
+
+### **Disk Space Monitoring Script**
+
+```bash
+#!/bin/bash
+
+# Set the threshold percentage for disk usage
+THRESHOLD=80
+
+# Get the current disk usage percentage for the root filesystem
+USAGE=$(df / | grep / | awk '{ print $5 }' | sed 's/%//g')
+
+# Check if the current usage exceeds the threshold
+if [ "$USAGE" -gt "$THRESHOLD" ]; then
+  # Send an alert (you could use mail, slack, or another notification method)
+  echo "Warning: Disk space usage has exceeded $THRESHOLD%. Current usage is $USAGE%." | mail -s "Disk Space Alert" you@example.com
+fi
+```
+
+### **How the Script Works:**
+1. **`THRESHOLD=80`**: This sets the threshold for disk usage at 80%. You can adjust this value to suit your needs.
+   
+2. **`df / | grep / | awk '{ print $5 }' | sed 's/%//g'`**: This command checks the disk usage of the root filesystem (`/`). It extracts the usage percentage and removes the `%` sign.
+
+3. **`if [ "$USAGE" -gt "$THRESHOLD" ]; then ... fi`**: This checks if the disk usage exceeds the threshold. If it does, the script proceeds to send an alert.
+
+4. **`echo "Warning: Disk space usage ... | mail -s "Disk Space Alert" you@example.com`**: If the usage exceeds the threshold, an email is sent to notify the administrator. You can replace the `mail` command with another notification method if needed.
+
+### **Running the Script**
+- Save the script to a file, for example, `disk_monitor.sh`.
+- Make it executable with the command: `chmod +x disk_monitor.sh`.
+- Schedule it to run periodically using cron (e.g., every hour) by adding an entry to your crontab:
+
+  ```bash
+  0 * * * * /path/to/disk_monitor.sh
+  ```
+
+This script helps you proactively manage disk space and prevent issues related to full disks.
 ```
 
 If the path to your favicon is `/favicon.ico`, you can leave `favicon_ico` unset.
