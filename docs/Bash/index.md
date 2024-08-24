@@ -65,6 +65,136 @@ echo "Backup process completed."
 ## Basic Commands and Utilities
 Here’s a breakdown of some of the most essential basic commands and utilities you’ll use when working with Bash. These commands are foundational for  navigating the file system, manipulating files, and interacting with the system.
 
+Some Bash fundamentals:
+::: {.cell .markdown}
+What is the difference between the .bash_profile, .bashrc, and .profile?
+The .bash_profile, .bashrc, and .profile files are all configuration
+scripts for shell environments in Unix-like operating systems, but they
+serve different purposes and are executed in different scenarios.
+Here\'s a breakdown of each:
+
+1.  .bash_profile Purpose: The .bash_profile script is executed
+    automatically when a user logs in using a Bash login shell. This is
+    typically the shell you see when you log in to a system remotely via
+    SSH or start a terminal session in a text mode console. Usage: It\'s
+    used to set up environment variables, paths, and other startup
+    programs that should be configured once per session. Execution: It
+    runs only once at the start of a login session.
+2.  .bashrc Purpose: The .bashrc script is executed for non-login
+    interactive shells. This typically includes new terminal windows or
+    tab sessions in a graphical desktop environment. Usage: It\'s mainly
+    used to configure the shell environment, such as setting aliases,
+    functions, and shell options that should be available in every
+    interactive shell session. Execution: It runs every time a new shell
+    session is opened.
+3.  .profile Purpose: The .profile script is similar to .bash_profile
+    but is more general and can be used by other shells like sh, dash,
+    or ksh. Usage: It is often used in environments where multiple types
+    of shells are in use or when the system defaults to a different
+    shell than Bash. It typically sets up environment variables and can
+    call .bash_profile or .bashrc if Bash-specific settings are needed.
+    Execution: Like .bash_profile, it runs at the start of a login
+    session but is more shell-agnostic. Summary: .bash_profile: Executed
+    for login shells, usually at the start of a session, mainly for
+    environment settings. .bashrc: Executed for non-login interactive
+    shells, mainly for configuring the interactive environment.
+    .profile: A more general startup script executed for login shells,
+    especially in environments where different shells might be used.
+    Typical Setup: On many systems, .bash_profile is configured to
+    source (include) .bashrc to ensure that the settings in .bashrc are
+    applied even during login sessions:
+
+Example code:
+
+if \[ -f \~/.bashrc \]; then
+. \~/.bashrc
+fi
+:::
+
+::: {.cell .markdown}
+Means by which to execute your .sh files: To run a `.sh` (shell script)
+file, you can follow these steps:
+
+### 1. **Make the Script Executable (if it's not already)** {#1-make-the-script-executable-if-its-not-already}
+
+Before running a shell script, ensure it has execute permissions. You
+can do this using the `chmod` command:
+
+``` bash
+chmod +x script_name.sh
+```
+
+This command makes the script executable.
+
+### 2. **Execute the Script** {#2-execute-the-script}
+
+There are a few different ways to run the script:
+
+#### a) **Run the Script with `./`** {#a-run-the-script-with-}
+
+This is the most common method. Navigate to the directory where the
+script is located and run it using `./`:
+
+``` bash
+./script_name.sh
+```
+
+#### b) **Run the Script with `bash` or `sh`**
+
+If you don't want to change permissions, you can explicitly run the
+script using `bash` or `sh`:
+
+``` bash
+bash script_name.sh
+```
+
+or
+
+``` bash
+sh script_name.sh
+```
+
+### Example:
+
+Let's say you have a script called `hello_world.sh`:
+
+``` bash
+#!/bin/bash
+echo "Hello, World!"
+```
+
+1.  **Make it executable**:
+
+    ``` bash
+    chmod +x hello_world.sh
+    ```
+
+2.  **Run the script**:
+
+    ``` bash
+    ./hello_world.sh
+    ```
+
+    or
+
+    ``` bash
+    bash hello_world.sh
+    ```
+
+This will output:
+
+    Hello, World!
+
+### Note:
+
+-   If the script is in a directory that's included in your `PATH`
+    environment variable, you can run it just by typing
+    `script_name.sh`.
+-   Always ensure the first line of your script (`#!/bin/bash`)
+    correctly points to the interpreter you want to use (in this case,
+    Bash).
+:::
+
 **File and Directory Navigation**
 1. **`pwd` (Print Working Directory)**
    - Displays the full path of the current directory you are in.
@@ -323,74 +453,7 @@ This script helps you proactively manage disk space and prevent issues related t
 
 
 
-::: {.cell .markdown}
-Exclamation Mark: In Jupyter Notebook, both ! and % can be used to
-execute shell commands, but they serve different purposes and have
-different scopes. ! (Exclamation Mark)
 
--   The ! character is used to execute shell commands directly from
-    within a Jupyter Notebook cell.
-
--   When you use !, you are essentially calling the command line
-    interface (CLI) of your system. For example:
-:::
-
-::: {.cell .code execution_count="44"}
-``` python
-%ls -la
-#files = %ls -la
-#files
-!echo hello, this world
-!echo "hello from withing quotes"
-```
-
-::: {.output .stream .stdout}
-     Volume in drive C is OS
-     Volume Serial Number is 30F1-DDB5
-
-     Directory of c:\Repos\Bash_Study
-:::
-
-::: {.output .stream .stderr}
-    File Not Found
-:::
-
-::: {.output .stream .stdout}
-    hello, this world
-    "hello from withing quotes"
-:::
-:::
-
-::: {.cell .markdown}
-Magic commands: Using the % \... %timeit x = sum(range(1000)) Some
-common magic commands include:
-
--   %timeit: Time execution of a Python statement.
--   %run: Run a Python script.
--   %env: Set environment variables.
--   %pwd: Print the current working directory.
--   %%bash: Run a cell of bash commands.
-:::
-
-::: {.cell .code execution_count="54"}
-``` python
-%pwd
-#%timeit x = sum(range(1000))
-```
-
-::: {.output .execute_result execution_count="54"}
-    'c:\\Repos\\Bash_Study'
-:::
-:::
-
-::: {.cell .markdown}
-Use ! when you want to run a shell command directly as if you were in a
-terminal. Use % for magic commands that perform specific actions within
-the notebook environment, often related to Python or the notebook
-itself.
-:::
-
-::: {.cell .markdown}
 The type \[type COMMAND\] built-in shell command in Bash is used to
 display information about a command\'s type. It tells you how the shell
 interprets a command, whether it is a built-in command, an alias, a
@@ -446,134 +509,7 @@ echo is /usr/bin/echo
     Returns success if all of the NAMEs are found; fails if any are not found.
 :::
 
-::: {.cell .markdown}
-What is the difference between the .bash_profile, .bashrc, and .profile?
-The .bash_profile, .bashrc, and .profile files are all configuration
-scripts for shell environments in Unix-like operating systems, but they
-serve different purposes and are executed in different scenarios.
-Here\'s a breakdown of each:
 
-1.  .bash_profile Purpose: The .bash_profile script is executed
-    automatically when a user logs in using a Bash login shell. This is
-    typically the shell you see when you log in to a system remotely via
-    SSH or start a terminal session in a text mode console. Usage: It\'s
-    used to set up environment variables, paths, and other startup
-    programs that should be configured once per session. Execution: It
-    runs only once at the start of a login session.
-2.  .bashrc Purpose: The .bashrc script is executed for non-login
-    interactive shells. This typically includes new terminal windows or
-    tab sessions in a graphical desktop environment. Usage: It\'s mainly
-    used to configure the shell environment, such as setting aliases,
-    functions, and shell options that should be available in every
-    interactive shell session. Execution: It runs every time a new shell
-    session is opened.
-3.  .profile Purpose: The .profile script is similar to .bash_profile
-    but is more general and can be used by other shells like sh, dash,
-    or ksh. Usage: It is often used in environments where multiple types
-    of shells are in use or when the system defaults to a different
-    shell than Bash. It typically sets up environment variables and can
-    call .bash_profile or .bashrc if Bash-specific settings are needed.
-    Execution: Like .bash_profile, it runs at the start of a login
-    session but is more shell-agnostic. Summary: .bash_profile: Executed
-    for login shells, usually at the start of a session, mainly for
-    environment settings. .bashrc: Executed for non-login interactive
-    shells, mainly for configuring the interactive environment.
-    .profile: A more general startup script executed for login shells,
-    especially in environments where different shells might be used.
-    Typical Setup: On many systems, .bash_profile is configured to
-    source (include) .bashrc to ensure that the settings in .bashrc are
-    applied even during login sessions:
-
-Example code:
-
-if \[ -f \~/.bashrc \]; then
-. \~/.bashrc
-fi
-:::
-
-::: {.cell .markdown}
-Means by which to execute your .sh files: To run a `.sh` (shell script)
-file, you can follow these steps:
-
-### 1. **Make the Script Executable (if it's not already)** {#1-make-the-script-executable-if-its-not-already}
-
-Before running a shell script, ensure it has execute permissions. You
-can do this using the `chmod` command:
-
-``` bash
-chmod +x script_name.sh
-```
-
-This command makes the script executable.
-
-### 2. **Execute the Script** {#2-execute-the-script}
-
-There are a few different ways to run the script:
-
-#### a) **Run the Script with `./`** {#a-run-the-script-with-}
-
-This is the most common method. Navigate to the directory where the
-script is located and run it using `./`:
-
-``` bash
-./script_name.sh
-```
-
-#### b) **Run the Script with `bash` or `sh`**
-
-If you don't want to change permissions, you can explicitly run the
-script using `bash` or `sh`:
-
-``` bash
-bash script_name.sh
-```
-
-or
-
-``` bash
-sh script_name.sh
-```
-
-### Example:
-
-Let's say you have a script called `hello_world.sh`:
-
-``` bash
-#!/bin/bash
-echo "Hello, World!"
-```
-
-1.  **Make it executable**:
-
-    ``` bash
-    chmod +x hello_world.sh
-    ```
-
-2.  **Run the script**:
-
-    ``` bash
-    ./hello_world.sh
-    ```
-
-    or
-
-    ``` bash
-    bash hello_world.sh
-    ```
-
-This will output:
-
-    Hello, World!
-
-### Note:
-
--   If the script is in a directory that's included in your `PATH`
-    environment variable, you can run it just by typing
-    `script_name.sh`.
--   Always ensure the first line of your script (`#!/bin/bash`)
-    correctly points to the interpreter you want to use (in this case,
-    Bash).
-:::
 
 ::: {.cell .markdown}
 In Bash, both `echo` and `printf` are used to display text or output
