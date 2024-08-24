@@ -251,10 +251,12 @@ Here’s a breakdown of some of the most essential basic commands and utilities 
 
 ```bash
 
-# Here's a useful Bash script that monitors disk space usage and sends an 
-# alert when the disk space usage exceeds a certain threshold. This can be
-# handy for system administrators who want to ensure that their systems don't
-# run out of disk space unexpectedly.
+: <<'COMMENT'
+ Here's a useful Bash script that monitors disk space usage and sends an 
+alert when the disk space usage exceeds a certain threshold. This can be
+handy for system administrators who want to ensure that their systems don't
+run out of disk space unexpectedly.
+COMMENT
 
 ### **Disk Space Monitoring Script**
 
