@@ -30,8 +30,34 @@ There are several alternatives to Bash. The most notable alternatives are:
    
 Other alternatives include: Dash, PowerShell, Elvish and Yash.
 
-```yaml
-# Set a path/url to a logo that will be displayed instead of the title
+```bash
+# Helpful  Bash script that automates the process of backing up a directory
+#!/bin/bash
+
+# Define variables
+SOURCE_DIR="/path/to/source/directory"
+BACKUP_DIR="/path/to/backup/directory"
+TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+BACKUP_NAME="backup_$TIMESTAMP.tar.gz"
+
+# Create a backup
+echo "Starting backup of $SOURCE_DIR..."
+tar -czf "$BACKUP_DIR/$BACKUP_NAME" "$SOURCE_DIR"
+
+# Verify the backup
+if [ $? -eq 0 ]; then
+    echo "Backup created successfully at $BACKUP_DIR/$BACKUP_NAME"
+else
+    echo "Backup failed!"
+    exit 1
+fi
+
+# Optional: Clean up old backups (e.g., older than 7 days)
+find "$BACKUP_DIR" -type f -name "backup_*.tar.gz" -mtime +7 -exec rm {} \;
+
+echo "Old backups cleaned up."
+echo "Backup process completed."
+
 logo: "/assets/images/just-the-docs.png"
 ```
 
