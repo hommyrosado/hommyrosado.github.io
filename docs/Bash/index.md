@@ -66,7 +66,7 @@ echo "Backup process completed."
 Here’s a breakdown of some of the most essential basic commands and utilities you’ll use when working with Bash. These commands are foundational for  navigating the file system, manipulating files, and interacting with the system.
 
 Some Bash fundamentals:
-::: {.cell .markdown}
+
 What is the difference between the .bash_profile, .bashrc, and .profile?
 The .bash_profile, .bashrc, and .profile files are all configuration
 scripts for shell environments in Unix-like operating systems, but they
@@ -103,15 +103,16 @@ Here\'s a breakdown of each:
     Typical Setup: On many systems, .bash_profile is configured to
     source (include) .bashrc to ensure that the settings in .bashrc are
     applied even during login sessions:
-
-Example code:
+--- bash
+# Example code:
 
 if \[ -f \~/.bashrc \]; then
 . \~/.bashrc
 fi
-:::
+---
 
-::: {.cell .markdown}
+
+
 Means by which to execute your .sh files: To run a `.sh` (shell script)
 file, you can follow these steps:
 
