@@ -297,26 +297,21 @@ fi
 
 This script helps you proactively manage disk space and prevent issues related to full disks.
 ```
+```yaml
 
+
+```
 
 ## Control Structures
 
----
----
 
 
 ## Functions
 
----
----
 
 ## Input/Output and Redirection
 
-```yaml
-# Enable or disable the side/mobile menu globally
-# Nav menu can also be selectively enabled or disabled using page variables or the minimal layout
-nav_enabled: true
-```
+
 
 ## Advanced Scripting Techniques
 
