@@ -187,7 +187,7 @@ This will output:
 
     Hello, World!
 
-### Note:
+Note:
 
 -   If the script is in a directory that's included in your `PATH`
     environment variable, you can run it just by typing
