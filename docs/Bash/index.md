@@ -62,7 +62,7 @@ echo "Backup process completed."
 ```
 
 ## Basic Commands and Utilities
-Here’s a breakdown of some of the most essential basic commands and utilities you’ll use when working with Bash. These commands are foundational for navigating the file system, manipulating files, and interacting with the system.
+Here’s a breakdown of some of the most essential basic commands and utilities \ you’ll use when working with Bash. These commands are foundational for \ navigating the file system, manipulating files, and interacting with the \ system.
 
 **File and Directory Navigation**
 1. **`pwd` (Print Working Directory)**
