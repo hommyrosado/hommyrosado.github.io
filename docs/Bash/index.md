@@ -23,7 +23,11 @@ In efforts to utilize Bash in more complex methods, I've found myself having to 
 
 ## Introduction to Bash
 There are several alternatives to Bash. The most notable alternatives are:
-1. Zsh -Z shell is a powerful shell alternative and an (improved) version of Bash.
+1. Zsh (Z-Shell) - Zshell is a powerful shell alternative and an (improved) version of Bash. Zsh is great for developers. I'll review Zsh more thoroughly following the completion of Bash.
+2. Fish (Friendly Interactive Shell) - Fish is an interactive shell that provides some cool features like Auto-suggetions and syntax highlighting. Fish is ideal for users who require a more modern shell.
+3. Ksh (Korn Shell) - Kshell is an older shell better suited for legacy systems.
+4. Tcsh (TENEX C Shell) - Tcsh is an enhanced version of the Cshell with features for command-ling editing and progamming completions specific to C programming language.
+5. 
 ```yaml
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "/assets/images/just-the-docs.png"
