@@ -58,16 +58,11 @@ find "$BACKUP_DIR" -type f -name "backup_*.tar.gz" -mtime +7 -exec rm {} \;
 
 echo "Old backups cleaned up."
 echo "Backup process completed."
-
-
 ```
 
-## Basic Commands and Utilities
-Here’s a breakdown of some of the most essential basic commands and utilities you’ll use when working with Bash. These commands are foundational for  navigating the file system, manipulating files, and interacting with the system.
+**Understanding some key information about Bash**
 
-Some Bash fundamentals:
-
-What is the difference between the .bash_profile, .bashrc, and .profile?
+**What is the difference between the .bash_profile, .bashrc, and .profile?** \
 The .bash_profile, .bashrc, and .profile files are all configuration
 scripts for shell environments in Unix-like operating systems, but they
 serve different purposes and are executed in different scenarios.
@@ -111,8 +106,7 @@ if \[ -f \~/.bashrc \]; then
 . \~/.bashrc
 fi
 ```
-
-
+**Various ways to Execute a Bash file / script**
 
 Means by which to execute your .sh files: To run a `.sh` (shell script)
 file, you can follow these steps:
@@ -196,6 +190,14 @@ Note:
     correctly points to the interpreter you want to use (in this case,
     Bash).
 :::
+
+## Basic Commands and Utilities
+Here’s a breakdown of some of the most essential basic commands and utilities you’ll use when working with Bash. These commands are foundational for  navigating the file system, manipulating files, and interacting with the system.
+
+Some Bash fundamentals:
+
+
+
 
 **File and Directory Navigation**
 1. **`pwd` (Print Working Directory)**
@@ -432,16 +434,13 @@ This script helps you proactively manage disk space and prevent issues related t
 ## Control Structures
 
 
-
 ## Functions
 
 
 ## Input/Output and Redirection
 
 
-
 ## Advanced Scripting Techniques
-
 
 
 ## Process Management
