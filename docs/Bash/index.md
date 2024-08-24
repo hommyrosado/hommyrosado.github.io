@@ -30,6 +30,7 @@ In efforts to utilize Bash in more complex methods, I've found myself having to 
    
 Other alternatives include: Dash, PowerShell, Elvish and Yash.
 
+### Example of Bash Script: Backing up a directory
 ```bash
 # Helpful Bash script that automates the process of backing up a directory
 #!/bin/bash
@@ -248,7 +249,7 @@ Here’s a breakdown of some of the most essential basic commands and utilities 
    - Example: `alias ll='ls -lah'`
 
 
-
+### Example of Bash Script: Disk Monitoring
 ```bash
 
 : <<'COMMENT'
