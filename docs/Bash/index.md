@@ -436,19 +436,19 @@ Control structures comprise Conditional Statements, Loops, and Case Statements (
 
 Control structures include:
 
-1. Conditional Statements: These allow the program to make decisions and execute different code based on certain conditions.
+   1. Conditional Statements: These allow the program to make decisions and execute different code based on certain conditions.
 
 Examples: if, else, elif, case
 
-2. Loops: These allow the program to execute a block of code multiple times.
+   2. Loops: These allow the program to execute a block of code multiple times.
 
 Examples: for, while, until
 
-3. Jump Statements: These control the flow by jumping to another part of the code, skipping or repeating execution.
+   3. Jump Statements: These control the flow by jumping to another part of the code, skipping or repeating execution.
 
 Examples: break, continue, return, exit
 
-4. Case Statements: The case statement in Bash is used for pattern matching and is an alternative to using multiple if-elif-else statements. It's particularly useful when you have to compare a single variable against multiple values. The case statement simplifies the structure of your script, making it more readable and easier to maintain.
+   4. Case Statements: The case statement in Bash is used for pattern matching and is an alternative to using multiple if-elif-else statements. It's particularly useful when you have to compare a single variable against multiple values. The case statement simplifies the structure of your script, making it more readable and easier to maintain.
 
 Note: 
 In Bash, esac is used to signify the end of a case statement. It's essentially case spelled backward, which is a common convention in many programming languages to mark the end of a block of code that was opened with a particular keyword.
