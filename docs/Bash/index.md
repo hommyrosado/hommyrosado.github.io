@@ -31,7 +31,7 @@ There are several alternatives to Bash. The most notable alternatives are:
 Other alternatives include: Dash, PowerShell, Elvish and Yash.
 
 ```bash
-# Helpful  Bash script that automates the process of backing up a directory
+# Helpful Bash script that automates the process of backing up a directory
 #!/bin/bash
 
 # Define variables
@@ -58,10 +58,11 @@ find "$BACKUP_DIR" -type f -name "backup_*.tar.gz" -mtime +7 -exec rm {} \;
 echo "Old backups cleaned up."
 echo "Backup process completed."
 
-logo: "/assets/images/just-the-docs.png"
+
 ```
 
 ## Basic Commands and Utilities
+
 ```yaml
 # Set a path/url to a favicon that will be displayed by the browser
 favicon_ico: "/assets/images/favicon.ico"
