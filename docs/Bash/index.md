@@ -8,7 +8,7 @@ nav_order: 2
 {: .no_toc }
 
 
-Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's \_config.yml file.
+In efforts to utilize Bash in more complex methods, I've found myself having to review and relearn some Bash principles.
 {: .fs-6 .fw-300 }
 
 ## Table of contents
