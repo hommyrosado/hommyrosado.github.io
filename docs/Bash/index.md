@@ -22,7 +22,8 @@ In efforts to utilize Bash in more complex methods, I've found myself having to 
 
 
 ## Introduction to Bash
-
+There are several alternatives to Bash. The most notable alternatives are:
+1. Zsh -Z shell is a powerful shell alternative and an (improved) version of Bash.
 ```yaml
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "/assets/images/just-the-docs.png"
