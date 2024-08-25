@@ -751,7 +751,7 @@ In this script:
 - The exit status of `some_command` is checked using `$?`.
 - Depending on whether the command succeeded or failed, an appropriate message is printed.
 
-### **Summary:**
+
 - **Exit status** is a key concept in Bash scripting that indicates the success or failure of a command.
 - A successful command returns `0`, while a failure returns a non-zero value.
 - The exit status is stored in the special variable `$?`.
